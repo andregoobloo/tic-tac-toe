@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -5,4 +6,70 @@
 
 body {
   box-sizing: border-box;
+  background: rgb(85, 0, 117);
+  background: linear-gradient(
+    90deg,
+    rgba(85, 0, 117, 0.5) 0%,
+    rgba(11, 9, 121, 0.5) 35%,
+    rgba(227, 69, 0, 0.5) 100%
+  );
+  font-family: "Shadows Into Light", sans-serif;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  height: 100vh;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.game-board {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.square {
+  border: 1px solid rgb(67, 67, 67);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 5rem;
+}
+
+.square:hover {
+  border: 5px solid rgba(237, 170, 141, 0.5);
+}
+
+.game-status {
+  font-size: 3rem;
+}
+
+.game-title {
+  font-size: 2rem;
+  margin-bottom: 0px auto;
+}
+
+.restart-btn {
+  font-family: "Shadows Into Light", sans-serif;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(237, 170, 141, 0.3);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.restart-btn:hover {
+  background-color: rgba(177, 71, 216, 0.2);
 }
